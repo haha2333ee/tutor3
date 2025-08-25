@@ -1,8 +1,11 @@
 import React from 'react';
+import heroImage from '/images/1.jpg';
 
-const Hero = () => {
+const Hero = ({ backgroundImage }) => {
   return (
-    <section id="home" className="hero-section">
+    <section id="home" className="hero-section" style={{
+      backgroundImage: `linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%), url(${backgroundImage})`
+    }}>
       <div className="container">
         <div className="row align-items-center min-vh-100">
           <div className="col-lg-6">
@@ -17,7 +20,7 @@ const Hero = () => {
           </div>
           <div className="col-lg-6">
             <div className="hero-image text-center" data-aos="fade-left">
-              <img src="/images/1.jpg" alt="在线学习" className="img-fluid rounded-lg shadow-lg" />
+              <img src={heroImage} alt="在线学习" className="img-fluid rounded-lg shadow-lg" />
             </div>
           </div>
         </div>

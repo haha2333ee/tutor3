@@ -8,6 +8,7 @@ import Teachers from './components/Teachers';
 import Universities from './components/Universities';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import heroBgImage from '/images/1.jpg';
 import './App.css';
 
 function App() {
@@ -20,22 +21,7 @@ function App() {
       });
     }
 
-    // Parallax scrolling effect
-    const handleParallax = () => {
-      const scrolled = window.pageYOffset;
-      const heroSection = document.querySelector('.hero-section');
-      const heroImage = document.querySelector('.hero-image');
-      
-      if (heroSection) {
-        const parallaxSpeed = 0.5;
-        heroSection.style.transform = `translateY(${scrolled * parallaxSpeed}px) scale(1.05)`;
-      }
-      
-      if (heroImage) {
-        const imageSpeed = 0.3;
-        heroImage.style.transform = `translateY(${scrolled * imageSpeed}px) scale(1.05)`;
-      }
-    };
+    // Removed parallax scrolling effect to prevent content movement
 
     // Smooth scrolling
     const setupSmoothScrolling = () => {
@@ -66,18 +52,17 @@ function App() {
     setTimeout(() => {
       setupSmoothScrolling();
       handleLoad();
-      window.addEventListener('scroll', handleParallax);
     }, 100);
 
     return () => {
-      window.removeEventListener('scroll', handleParallax);
+      // Cleanup removed
     };
   }, []);
 
   return (
     <div className="App">
       <Header />
-      <Hero />
+      <Hero backgroundImage={heroBgImage} />
       <Features />
       <Services />
       <SuccessStories />

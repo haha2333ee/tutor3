@@ -1,4 +1,6 @@
 import React from 'react';
+import logoSticky from '/images/logo-tt.png';
+import logoTransparent from '/images/logo-tt-white.png';
 
 const Header = () => {
   return (
@@ -6,8 +8,8 @@ const Header = () => {
       <nav className="navbar navbar-expand-lg navbar-light">
         <div className="container position-relative">
           <a className="navbar-brand" href="#home">
-            <img src="/images/logo-tt.png" alt="TogoTutor Logo" className="img-fluid navbar-brand-sticky" />
-            <img src="/images/logo-tt-white.png" alt="TogoTutor Logo" className="img-fluid navbar-brand-transparent" style={{ display: 'none' }} />
+            <img src={logoSticky} alt="TogoTutor Logo" className="img-fluid navbar-brand-sticky" />
+            <img src={logoTransparent} alt="TogoTutor Logo" className="img-fluid navbar-brand-transparent" style={{ display: 'none' }} />
           </a>
           <div className="d-flex align-items-center order-lg-last">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
