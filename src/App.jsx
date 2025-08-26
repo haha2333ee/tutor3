@@ -8,6 +8,7 @@ import Teachers from './components/Teachers';
 import Universities from './components/Universities';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import GoogleAnalytics from './components/GoogleAnalytics';
 import heroBgImage from '/images/1.jpg';
 import './App.css';
 
@@ -61,6 +62,7 @@ function App() {
 
   return (
     <div className="App">
+      <GoogleAnalytics />
       <Header />
       <Hero backgroundImage={heroBgImage} />
       <Features />
